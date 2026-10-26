@@ -1,0 +1,14 @@
+type frontlightd, domain;
+type frontlightd_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(frontlightd)
+
+get_prop(frontlightd, vendor_frontlight_prop)
+
+allow frontlightd sysfs:dir search;
+allow frontlightd vendor_sysfs_graphics:dir search;
+allow frontlightd vendor_sysfs_graphics:file r_file_perms;
+
+allow frontlightd i2c_frontlight_device:chr_file rw_file_perms;
+
+allow frontlightd sysfs_onyx_frontlight:dir search;
+allow frontlightd sysfs_onyx_frontlight:file w_file_perms;

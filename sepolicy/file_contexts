@@ -1,0 +1,2 @@
+/dev/i2c-3 u:object_r:i2c_frontlight_device:s0
+/vendor/bin/frontlightd u:object_r:frontlightd_exec:s0
